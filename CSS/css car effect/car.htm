@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Car Effect</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			transition: 8s;
+		}
+		.animation{					
+			width: 100%;
+			padding: 50px 0;
+			background-image: url('road.jpg');
+			background-size:100% 100%;
+			transition: 8s;
+			height: 200px;
+		}
+		body:hover .track{
+			margin-left: 70%;
+		}
+		.track{
+			width:300px;
+			height: 150px;
+			position: relative;
+			transition: 8s;
+		}
+		.track_back{
+			height: 100px;
+			width: 280px;	
+			float:right;
+			background-image: url('aa.png');
+			background-size:92% 100%;
+			background-repeat: no-repeat;
+		}
+		
+		.wheel{
+			width:100%;
+			position: absolute;
+			bottom:0;
+		}
+		body:hover .wheel_round{
+			transform: rotate(360deg);
+		}
+		.wheel_round{
+			height: 50px;
+		    width: 50px;
+		    border-radius: 50%;
+		    display: inline-block;
+		    margin-left: 40px;
+		    margin-top: 15px;
+		    background: #fff;
+		    transition: 8s;
+		    background-image: url('wheel.png');
+		    background-size: 100% 100%;
+		    position: relative;
+		    top: -40px;
+		    left: 15px;
+		    margin-right: 76px;
+		    margin-left: 22px;
+		}
+		.track2{
+			width:300px;
+			height: 150px;
+			position: relative;
+			transition: 8s;
+			margin-left: auto;
+		}
+		body:hover .track2{
+			margin-right: 70%;
+			
+		}
+		.track2 .track_back{
+			height: 100px;
+			width: 280px;	
+			float:left;
+			background-image: url('bb.png');
+			background-size: 92% 100%;
+		}
+		.track2 .wheel_round{
+			margin-right: 87px;
+		    margin-left: 10px;
+		    top: -45px;
+		}
+		body:hover .track2 .wheel_round{
+			transform: rotate(-360deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="animation">
+		<div class="track">
+			<div class="track_front"></div>
+			<div class="track_back"></div>
+			<div class="wheel">
+				<div class="wheel_round"></div>
+				<div class="wheel_round"></div>
+				<!-- <div class="wheel_round"></div> -->
+			</div>
+		</div>
+	</div>
+	<div class="animation">
+		<div class="track2">
+			<!-- <div class="track_front"></div> -->
+			<div class="track_back"></div>
+			<div class="wheel">
+				<div class="wheel_round"></div>
+				<div class="wheel_round"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
